@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* Reset margin and padding for the body and other elements */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%; 
+            font-family: Arial, sans-serif; /* Optional: for better text display */
+        }
+
+        /* Correct @font-face */
+        @font-face {
+            font-family: 'Comfortaa';
+            src: url('workspace\Comfortaa-Medium.ttf') format('truetype'); /* Correct relative path */
+        }
+
+        .appbar {
+            width: 100%;
+            background-color: darkgrey;
+            display: flex;
+            flex-direction: row;
+            color: white;
+            opacity: 80%;
+            height: 60px;
+            gap: 3em;
+            align-items: center;
+            padding: 0 1em;
+            flex-wrap: nowrap; /* Allow items to wrap on smaller screens */
+        }
+
+        .appbar p {
+            font-size: 20px;
+            color: #000;
+        }
+
+        .appbar p:first-child {
+            color: darkred;
+            font-family: 'Comfortaa', sans-serif; /* Apply custom font */
+            margin-right: 10em;
+        }
+
+        .appbar p {
+            padding: 0;
+            margin: 0;
+        }
+
+        .appbar div {
+            background-color: white;
+            color: black;
+            padding: 10px 15px; /* Add padding to make it look like a button */
+            cursor: pointer;
+            border-radius: 5px; /* Rounded corners for the button */
+        }
+        
+        .appbar p:hover {
+            color:white;
+        }
+
+        .appbar div:hover {
+            background-color: #ff7f50; /* Hover effect for the button */
+        }
+
+        .body {
+            background-color: black;
+            display: grid;
+            grid-template-columns: 1fr 0.5fr;
+            grid-template-rows: 1fr 1fr 0.5fr;
+            margin: 0;
+            width: 100%;
+            padding: 20px;
+            height: 100%;  /* Ensure the body takes up full screen height */
+        }
+
+        .bodyleft {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            margin-left: 3em;
+            margin-top: 80px;
+        }
+
+        .bodyleft h1,
+        .bodyleft h2,
+        .bodyleft h3 {
+            margin: 0; /* Remove margins */
+        }
+
+        .bodyleft p {
+            margin-top: 20px; /* Reduce space between heading and paragraph */
+            font-size: 19px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .buttons p {
+            background-color: #ff7f50;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+        }
+
+        .buttons p:hover {
+            background-color: #ff4500;
+        }
+
+        .image {
+            align-items: end;
+            max-width: 300px;
+            min-width: 200px;
+            border-radius: 50%;
+            grid-row: span 2;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            .appbar {
+                flex-direction: column; /* Stack items vertically on smaller screens */
+                gap: 1em;
+            }
+
+            .bodyleft {
+                margin-left: 1em;
+                margin-top: 20px; /* Reduce the space for smaller screens */
+            }
+
+            .image {
+                width: 150px; /* Smaller image size for mobile */
+                grid-row: 1; /* Ensure the image doesn’t span multiple rows */
+                margin-top: 1em;
+            }
+
+            .body {
+                grid-template-columns: 1fr; /* Stack the columns on mobile */
+                padding: 1em;
+            }
+
+            .bodyleft h1, .bodyleft h2, .bodyleft h3, .bodyleft p {
+                font-size: 16px; /* Adjust font size for mobile */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .bodyleft h1, .bodyleft h2, .bodyleft h3 {
+                font-size: 14px; /* Further reduce font size for very small screens */
+            }
+
+            .bodyleft p {
+                font-size: 14px; /* Reduce paragraph font size */
+            }
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhinand Portfolio</title>
+</head>
+<body>
+
+    <div class="appbar">
+        <p>abhinand</p>
+        <p>Portfolio</p>
+        <p>Services</p>
+        <p>Experience</p>
+        <p>Projects</p>
+        <p>Education</p>
+        <div>Contact Me</div>
+    </div>
+
+    <div class="body">
+        <div class="bodyleft">
+            <h3 style="font-size: 30px;">Hi</h3>
+            <h2 style="font-size:40px;color:orange;">I'm Abhinand</h2>
+            <h1 style="font-size: 50px;">a Frontend Developer</h1>
+            <p>Frontend Web & Flutter Developer with a Computer Science background, specializing<br /> in responsive web and mobile app development.</p>
+            <div class="buttons">
+                <p>Hire Me</p>
+                <p>Experience</p>
+            </div>
+        </div>
+        <img class="image" src="./image.jpg" alt="Profile Image">
+    </div>
+
+</body>
+</html>
